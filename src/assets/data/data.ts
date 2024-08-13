@@ -22,7 +22,7 @@ const data: DataItem[] = [
     detailed:
       "判断在屏幕上滑动的方向，允许在任意盒子中滑动，移动过程中实时返回当前X/Y坐标，接收回调函数，返回起始位置和结束位置的X/Y坐标值对象，支持 PC 和移动端。",
     grammar:
-      "JTools.slideDirection(selector: String, callback: Function, real?: Boolean, realStartEnd?: Boolean)",
+      "jutils.slideDirection(selector: String, callback: Function, real?: Boolean, realStartEnd?: Boolean)",
     param: [
       {
         name: "selector",
@@ -47,7 +47,7 @@ const data: DataItem[] = [
         (<a href='https://codepen.io/zhchjiang95'>@zhchjiang95</a>) on <a href='https://codepen.io'>CodePen</a>.
       </iframe>`,
       areaList: [],
-      text: `JTools.slideDirection('#box', (dir, real) => console.log(dir), true, false) ==> {startX: 54, startY: 82, endX: 54, endY: 82} / {realX: 23, realY: 45}`,
+      text: `jutils.slideDirection('#box', (dir, real) => console.log(dir), true, false) ==> {startX: 54, startY: 82, endX: 54, endY: 82} / {realX: 23, realY: 45}`,
     },
   },
   // {
@@ -57,7 +57,7 @@ const data: DataItem[] = [
   //   desc: "格式化查询参数",
   //   detailed:
   //     "格式化地址栏查询参数，返回所有参数的对象形式，可传入参数指定获取某个值，返回对象。",
-  //   grammar: "JTools.formatQueryParam(key?: Any)",
+  //   grammar: "jutils.formatQueryParam(key?: Any)",
   //   param: [
   //     {
   //       name: "key[可选]",
@@ -70,7 +70,7 @@ const data: DataItem[] = [
   //       (<a href='https://codepen.io/zhchjiang95'>@zhchjiang95</a>) on <a href='https://codepen.io'>CodePen</a>.
   //     </iframe>`,
   //     areaList: ["http://fiume.cn/jtools?id=2&age=18"],
-  //     text: `JTools.formatQueryParam() ==> {id: 2, age: 18}`,
+  //     text: `jutils.formatQueryParam() ==> {id: 2, age: 18}`,
   //   },
   // },
   {
@@ -79,13 +79,13 @@ const data: DataItem[] = [
     checked: false,
     desc: "日期格式化",
     detailed:
-      "格式化当前或自定义时间日期，自定义年月日分隔符和时分秒显示。如需更强大用法请使用：<a href='http://momentjs.cn/' target='_blank'>moment.js</a>",
+      "格式化当前或自定义时间日期，自定义年月日分隔符和时分秒显示。",
     grammar:
-      "JTools.formatTime(sep?: String, millisecond? Number | Date, hours?: Boolean)",
+      "jutils.formatDate({ sep?: String, millisecond?: Number | Date, showHours?: Boolean })",
     param: [
       {
         name: "options",
-        desc: "配置对象，可配置属性[3]：sep?、millisecond?、hours?。<br/>1)、sep[可选]：年月日分隔符。默认：-。<br/>2)、millisecond[可选]：自定义时间（毫秒），纯数字或Date()。默认当前时间。<br/>3)、hours[可选]：是否显示时分秒。默认：false。",
+        desc: "配置对象，可配置属性[3]：sep?、millisecond?、hours?。<br/>1)、sep[可选]：年月日分隔符。默认：-。<br/>2)、millisecond[可选]：自定义时间（毫秒），纯数字或Date()。默认当前时间。<br/>3)、showHours[可选]：是否显示时分秒。默认：false。",
       },
     ],
     example: {
@@ -94,7 +94,7 @@ const data: DataItem[] = [
       (<a href='https://codepen.io/zhchjiang95'>@zhchjiang95</a>) on <a href='https://codepen.io'>CodePen</a>.
       </iframe>`,
       areaList: [],
-      text: `JTools.formatTime('-', Date.now() + 20, true) ==> "2020-08-24 15:06:32"`,
+      text: `jutils.formatTime('-', Date.now() + 20, true) ==> "2020-08-24 15:06:32"`,
     },
   },
   {
@@ -103,13 +103,13 @@ const data: DataItem[] = [
     checked: false,
     desc: "页面锚点",
     detailed:
-      "指定页面滑动到某个位置，自定义滑动速度，自定义滑动方向。须整个页面可滑动！",
+      "指定页面滚动到某个位置，自定义滚动速度，自定义滚动方向。须整个页面可滚动！",
     grammar:
-      "JTools.pageAnchor(anchor: Number, speed: Number, direction: Boolean)",
+      "jutils.pageAnchor({ anchor: Number, speed: Number, down: Boolean })",
     param: [
       {
         name: "options",
-        desc: "配置对象，可配置属性[3]：anchor、speed?、down?。<br/>1)、anchor：滑动到的目标位置。<br/>2)、speed：滑动速度。<br/>3)、down：滑动方向，向下（true）/向上（false），默认：true。",
+        desc: "配置对象，可配置属性[3]：anchor、speed?、down?。<br/>1)、anchor：滚动到的目标位置。<br/>2)、speed：滚动速度。<br/>3)、down：向下滚动（下：true，上：false），默认：true。",
       },
     ],
     example: {
@@ -118,7 +118,7 @@ const data: DataItem[] = [
       (<a href='https://codepen.io/zhchjiang95'>@zhchjiang95</a>) on <a href='https://codepen.io'>CodePen</a>.
       </iframe>`,
       areaList: [],
-      text: `JTools.pageAnchor(100, 10, true)`,
+      text: `jutils.pageAnchor(100, 10, true)`,
     },
   },
   {
@@ -128,7 +128,7 @@ const data: DataItem[] = [
     desc: "盒子锚点",
     detailed:
       "盒子锚点，在任意可滑动盒子中跳转；监听事件元素需指定 data-jt-id 值为目标元素唯一标识 id。",
-    grammar: "JTools.boxAnchor(options: Object, callback?: Function)",
+    grammar: "jutils.boxAnchor(options: Object, callback?: Function)",
     param: [
       {
         name: "options",
@@ -148,7 +148,7 @@ const data: DataItem[] = [
         `<div id="source-box"><a data-jt-id="h1">锚点到h1</a></div>`,
         `<div id="target-box"><h4 id="h1" data-jt-type="jt">我的id是h1</h4></div>`,
       ],
-      text: `JTools.boxAnchor({source: 'div#source-box', target: '#target-box'}, (re) => {console.log(re)}) ==> {el: <a data-jt-id="h1">锚点到h1</a>, jtId: 'h1'}`,
+      text: `jutils.boxAnchor({source: 'div#source-box', target: '#target-box'}, (re) => {console.log(re)}) ==> {el: <a data-jt-id="h1">锚点到h1</a>, jtId: 'h1'}`,
     },
   },
   {
@@ -159,7 +159,7 @@ const data: DataItem[] = [
     detailed:
       "滚动至底部时，加载更多数据，或执行一些自定义的事件。支持调用返回值清除绑定事件。",
     grammar:
-      "const unbind = JTools.infiniteScroll(options: Object, callback: Function)",
+      "const unbind = jutils.infiniteScroll(options: Object, callback: Function)",
     param: [
       {
         name: "options",
@@ -182,7 +182,7 @@ const data: DataItem[] = [
       areaList: [
         `<div class="big-box"><div>我很高，高到父级有滚动条！</div></div>`,
       ],
-      text: `JTools.infiniteScroll({el: '.big-box', delay: 100, distance: 10 }, () => { console.log('hello, JTools!') }))`,
+      text: `jutils.infiniteScroll({el: '.big-box', delay: 100, distance: 10 }, () => { console.log('hello, jutils!') }))`,
     },
   },
   {
@@ -192,7 +192,7 @@ const data: DataItem[] = [
     desc: "自适应缩放（大屏）",
     detailed: "自适应等比缩放。适用大屏可视化自动适配屏幕。",
     grammar:
-      "JTools.adaptiveScaling(targetEl: HTMLElement, sourceEl: HTMLElement, designSize: String)",
+      "jutils.adaptiveScaling(targetEl: HTMLElement, sourceEl: HTMLElement, designSize: Number[])",
     param: [
       {
         name: "targetEl",
@@ -204,7 +204,7 @@ const data: DataItem[] = [
       },
       {
         name: "designSize",
-        desc: "设计稿尺寸，如：1920x1080（注意尺寸中的‘x’是‘ABCD...XYZ’中X的小写x）。",
+        desc: "设计稿尺寸，如：1920x1080，传入 [1920, 1080]。",
       },
     ],
     example: {
