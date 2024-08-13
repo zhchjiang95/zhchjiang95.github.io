@@ -1,0 +1,32 @@
+{
+  "name": "jutils-doc",
+  "version": "1.0.0",
+  "description": "JavaScript 便利工具集",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhchjiang95/zhchjiang95.github.io.git"
+  },
+  "keywords": [
+    "jutils"
+  ],
+  "author": "zhchjiang95",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhchjiang95/zhchjiang95.github.io/issues"
+  },
+  "homepage": "https://github.com/zhchjiang95/zhchjiang95.github.io#readme",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "remixicon": "^4.3.0"
+  }
+}
