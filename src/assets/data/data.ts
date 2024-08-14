@@ -240,7 +240,7 @@ const data: DataItem[] = [
       },
     ],
     example: {
-      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="FilterTree 过滤树数据" src="https://codepen.io/zhchjiang95/embed/ExBbRpg?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="FilterTree 过滤树数据" src="https://codepen.io/zhchjiang95/embed/ExBbRpg?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/zhchjiang95/pen/ExBbRpg">
       FilterTree 过滤树数据</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
       on <a href="https://codepen.io">CodePen</a>.
@@ -265,7 +265,7 @@ const data: DataItem[] = [
       },
     ],
     example: {
-      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="matchString 匹配字符串" src="https://codepen.io/zhchjiang95/embed/yLdPEEB?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="matchString 匹配字符串" src="https://codepen.io/zhchjiang95/embed/yLdPEEB?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/zhchjiang95/pen/yLdPEEB">
       matchString 匹配字符串</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
       on <a href="https://codepen.io">CodePen</a>.
