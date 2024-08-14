@@ -50,36 +50,35 @@ const data: DataItem[] = [
       text: `jutils.slideDirection('#box', (dir, real) => console.log(dir), true, false) ==> {startX: 54, startY: 82, endX: 54, endY: 82} / {realX: 23, realY: 45}`,
     },
   },
-  // {
-  //   title: "FormatQueryParam",
-  //   hash: "formatQueryParam",
-  //   checked: false,
-  //   desc: "格式化查询参数",
-  //   detailed:
-  //     "格式化地址栏查询参数，返回所有参数的对象形式，可传入参数指定获取某个值，返回对象。",
-  //   grammar: "jutils.formatQueryParam(key?: Any)",
-  //   param: [
-  //     {
-  //       name: "key[可选]",
-  //       desc: "获取某个参数的值，返回对象。否则返回所有参数对象。",
-  //     },
-  //   ],
-  //   example: {
-  //     iframe: `<iframe height="265" style="width: 100%;" scrolling="no" title="FormatQueryParam 格式化查询参数" src="https://codepen.io/zhchjiang95/embed/RwRWOzq?height=265&theme-id=light&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  //       See the Pen <a href='https://codepen.io/zhchjiang95/pen/RwRWOzq'>FormatQueryParam 格式化查询参数</a> by zhchjiang95
-  //       (<a href='https://codepen.io/zhchjiang95'>@zhchjiang95</a>) on <a href='https://codepen.io'>CodePen</a>.
-  //     </iframe>`,
-  //     areaList: ["http://fiume.cn/jtools?id=2&age=18"],
-  //     text: `jutils.formatQueryParam() ==> {id: 2, age: 18}`,
-  //   },
-  // },
+  {
+    title: "formatUrlSearch",
+    hash: "formatUrlSearch",
+    checked: false,
+    desc: "格式化查询参数",
+    detailed:
+      "格式化URL查询参数，返回所有参数的对象集合，传入参数获取指定的某个参数值。",
+    grammar: "jutils.formatUrlSearch(key?: string)",
+    param: [
+      {
+        name: "key[可选]",
+        desc: "获取某个参数的值。",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="265" style="width: 100%;" scrolling="no" title="formatQueryParam 格式化查询参数" src="https://codepen.io/zhchjiang95/embed/RwRWOzq?height=265&theme-id=light&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+        See the Pen <a href='https://codepen.io/zhchjiang95/pen/RwRWOzq'>formatQueryParam 格式化查询参数</a> by zhchjiang95
+        (<a href='https://codepen.io/zhchjiang95'>@zhchjiang95</a>) on <a href='https://codepen.io'>CodePen</a>.
+      </iframe>`,
+      areaList: ["http://fiume.cn/jtools?id=2&age=18"],
+      text: `jutils.formatUrlSearch() ==> {id: 2, age: 18}`,
+    },
+  },
   {
     title: "FormatTime",
     hash: "formatTime",
     checked: false,
     desc: "日期格式化",
-    detailed:
-      "格式化当前或自定义时间日期，自定义年月日分隔符和时分秒显示。",
+    detailed: "格式化当前或自定义时间日期，自定义年月日分隔符和时分秒显示。",
     grammar:
       "jutils.formatDate({ sep?: String, millisecond?: Number | Date, showHours?: Boolean })",
     param: [
@@ -211,6 +210,65 @@ const data: DataItem[] = [
       iframe: `<iframe height="265" style="width: 100%;" scrolling="no" title="AdaptiveScaling 自适应动态缩放" src="https://codepen.io/zhchjiang95/embed/VwpwrGL?height=265&theme-id=light&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href='https://codepen.io/zhchjiang95/pen/VwpwrGL'>AdaptiveScaling 自适应动态缩放</a> by zhchjiang95
       (<a href='https://codepen.io/zhchjiang95'>@zhchjiang95</a>) on <a href='https://codepen.io'>CodePen</a>.
+      </iframe>`,
+    },
+  },
+  {
+    title: "FilterTree",
+    hash: "filterTree",
+    checked: false,
+    desc: "搜索过滤树数据",
+    detailed: "搜索树，按树层级返回过滤后树数据。",
+    grammar:
+      "jutils.filterTree(data: any, searchField: string, searchValue: string, { childrenField: string; callback: Function })",
+    param: [
+      {
+        name: "data",
+        desc: "树数据，须 children 字段，可使用 childrenField 替换",
+      },
+      {
+        name: "searchField",
+        desc: "需要搜索的字段",
+      },
+      {
+        name: "searchValue",
+        desc: "搜索的字符串",
+      },
+      {
+        name: "rest",
+        desc: "其余项：<br/>①childrenField：子级数组不是children，可替换 children 字段；<br/>②callback：回调函数，过滤的数据用来再做些什么？",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="FilterTree 过滤树数据" src="https://codepen.io/zhchjiang95/embed/ExBbRpg?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/zhchjiang95/pen/ExBbRpg">
+      FilterTree 过滤树数据</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+      </iframe>`,
+    },
+  },
+  {
+    title: "MatchString",
+    hash: "matchString",
+    checked: false,
+    desc: "匹配字符串",
+    detailed: "字符串中匹配字符，匹配出的字符可用于高亮显示等。",
+    grammar: "jutils.matchString(string: string, matchString: string)",
+    param: [
+      {
+        name: "string",
+        desc: "字符串",
+      },
+      {
+        name: "matchString",
+        desc: "需要匹配的字符",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="matchString 匹配字符串" src="https://codepen.io/zhchjiang95/embed/yLdPEEB?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/zhchjiang95/pen/yLdPEEB">
+      matchString 匹配字符串</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      on <a href="https://codepen.io">CodePen</a>.
       </iframe>`,
     },
   },
