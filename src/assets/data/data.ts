@@ -248,31 +248,6 @@ const data: DataItem[] = [
     },
   },
   {
-    title: "ThrottleFn",
-    hash: "throttleFn",
-    checked: false,
-    desc: "节流函数",
-    detailed: "在连续的函数触发过程限制执行次数。",
-    grammar: "jutils.throttleFn(fn: () => void, ms: number, trailing?: boolean)",
-    param: [
-      {
-        name: "fn",
-        desc: "在毫秒（ms）后要执行的函数",
-      },
-      {
-        name: "ms",
-        desc: "延迟毫秒数，默认 200",
-      },
-      {
-        name: "trailing",
-        desc: "节流过程中最后一次自动执行，默认为 false",
-      },
-    ],
-    example: {
-      iframe: ``,
-    },
-  },
-  {
     title: "DebounceFn",
     hash: "debounceFn",
     checked: false,
@@ -294,9 +269,9 @@ const data: DataItem[] = [
       },
     ],
     example: {
-      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="ThrottleFn 节流函数" src="https://codepen.io/zhchjiang95/embed/GRbygWo?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="DebounceFn 防抖函数" src="https://codepen.io/zhchjiang95/embed/GRbygWo?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/zhchjiang95/pen/GRbygWo">
-      ThrottleFn 节流函数</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      DebounceFn 防抖函数</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
       on <a href="https://codepen.io">CodePen</a>.
       </iframe>`,
     },
