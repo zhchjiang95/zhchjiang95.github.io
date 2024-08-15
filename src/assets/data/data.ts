@@ -305,6 +305,39 @@ const data: DataItem[] = [
       </iframe>`,
     },
   },
+  {
+    title: "CanvasPathEvent",
+    hash: "canvasPathEvent",
+    checked: false,
+    desc: "canvasPath2D事件",
+    detailed: "给Canvas Path2D路径绑定事件。",
+    grammar: "jutils.canvasPathEvent(canvas: HTMLCanvasElement; paths: Path2D[]; eventType: string | string[], cb: (res) => void, { ms: number; devicePixelRatio: number })",
+    param: [
+      {
+        name: "canvas",
+        desc: "canvas元素",
+      },
+      {
+        name: "paths",
+        desc: "Path2D数组",
+      },
+      {
+        name: "eventType",
+        desc: "事件类型或事件类型数组：'mousemove' | 'mouseleave' | 'mouseover' | 'click'",
+      },
+      {
+        name: "opts",
+        desc: "<br/>①ms：节流时延，默认80毫秒；<br/>②devicePixelRatio：如果自定义了画布大小与样式大小比，则传入",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="CanvasPathEvent canvasPath2D事件" src="https://codepen.io/zhchjiang95/embed/yLdpYVO?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/zhchjiang95/pen/yLdpYVO">
+      CanvasPathEvent canvasPath2D事件</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+      </iframe>`,
+    },
+  },
 ];
 
 export default data;
