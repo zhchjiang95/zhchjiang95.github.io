@@ -248,26 +248,84 @@ const data: DataItem[] = [
     },
   },
   {
-    title: "MatchString",
-    hash: "matchString",
+    title: "ThrottleFn",
+    hash: "throttleFn",
     checked: false,
-    desc: "匹配字符串",
-    detailed: "字符串中匹配字符，匹配出的字符可用于高亮显示等。",
-    grammar: "jutils.matchString(string: string, matchString: string)",
+    desc: "节流函数",
+    detailed: "在连续的函数触发过程限制执行次数。",
+    grammar: "jutils.throttleFn(fn: () => void, ms: number, trailing?: boolean)",
     param: [
       {
-        name: "string",
-        desc: "字符串",
+        name: "fn",
+        desc: "在毫秒（ms）后要执行的函数",
       },
       {
-        name: "matchString",
-        desc: "需要匹配的字符",
+        name: "ms",
+        desc: "延迟毫秒数，默认 200",
+      },
+      {
+        name: "trailing",
+        desc: "节流过程中最后一次自动执行，默认为 false",
       },
     ],
     example: {
-      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="matchString 匹配字符串" src="https://codepen.io/zhchjiang95/embed/yLdPEEB?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-      See the Pen <a href="https://codepen.io/zhchjiang95/pen/yLdPEEB">
-      matchString 匹配字符串</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      iframe: ``,
+    },
+  },
+  {
+    title: "DebounceFn",
+    hash: "debounceFn",
+    checked: false,
+    desc: "防抖函数",
+    detailed: "在连续的函数触发过程执行最后一次。",
+    grammar: "jutils.debounceFn(fn: () => void, ms: number, opts?: { maxWait?: number })",
+    param: [
+      {
+        name: "fn",
+        desc: "连续触发的函数",
+      },
+      {
+        name: "ms",
+        desc: "执行等待的毫秒数，默认 200",
+      },
+      {
+        name: "opts",
+        desc: "①maxWait：最大等待时间，超过立即执行一次",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="ThrottleFn 节流函数" src="https://codepen.io/zhchjiang95/embed/GRbygWo?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/zhchjiang95/pen/GRbygWo">
+      ThrottleFn 节流函数</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+      </iframe>`,
+    },
+  },
+  {
+    title: "ThrottleFn",
+    hash: "throttleFn",
+    checked: false,
+    desc: "节流函数",
+    detailed: "在连续的函数触发过程限制执行次数。",
+    grammar: "jutils.throttleFn(fn: () => void, ms: number, trailing: boolean)",
+    param: [
+      {
+        name: "fn",
+        desc: "在毫秒（ms）后要执行的函数",
+      },
+      {
+        name: "ms",
+        desc: "延迟毫秒数，默认 200",
+      },
+      {
+        name: "trailing",
+        desc: "节流过程中最后一次自动执行，默认为 false",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="ThrottleFn 节流函数" src="https://codepen.io/zhchjiang95/embed/LYKeExo?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/zhchjiang95/pen/LYKeExo">
+      ThrottleFn 节流函数</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
       on <a href="https://codepen.io">CodePen</a>.
       </iframe>`,
     },
