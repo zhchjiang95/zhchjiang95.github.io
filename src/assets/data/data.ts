@@ -311,7 +311,7 @@ const data: DataItem[] = [
     checked: false,
     desc: "canvasPath2D事件",
     detailed: "给Canvas Path2D路径绑定事件。",
-    grammar: "jutils.canvasPathEvent(canvas: HTMLCanvasElement; paths: Path2D[]; eventType: string | string[], cb: (res) => void, { ms: number; devicePixelRatio: number })",
+    grammar: "jutils.canvasPathEvent(canvas: HTMLCanvasElement; paths: Path2D[]; eventType: string | string[], cb: (res) => void, { ms: number; dpr: number })",
     param: [
       {
         name: "canvas",
@@ -327,7 +327,7 @@ const data: DataItem[] = [
       },
       {
         name: "opts",
-        desc: "<br/>①ms：节流时延，默认80毫秒；<br/>②devicePixelRatio：如果自定义了画布大小与样式大小比，则传入",
+        desc: "<br/>①ms：节流时延，默认80毫秒；<br/>②dpr：如果自定义了画布大小与样式大小比，则传入",
       },
     ],
     example: {
@@ -338,6 +338,32 @@ const data: DataItem[] = [
       </iframe>`,
     },
   },
+  {
+    title: "CreateCanvas",
+    hash: "createCanvas",
+    checked: false,
+    desc: "创建 Canvas 元素",
+    detailed: "快速创建 Canvas 元素。",
+    grammar: "jutils.createCanvas(canvas?: HTMLCanvasElement; opts?: {width?: number; height?: number;dpr: number;attrs: {}})",
+    param: [
+      {
+        name: "canvas",
+        desc: "canvas元素，不传或null将自动创建",
+      },
+      {
+        name: "opts",
+        desc: "<br/>①width：画布宽，默认200；<br/>②height：画布高，默认：100；③dpr: 画布宽高与样式宽高比值，默认：2;④attrs?: 其他属性。'font' | 'fillStyle' | 'strokeStyle' | 'lineWidth'等属性",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="CreateCanvas 创建 Canvas 元素" src="https://codepen.io/zhchjiang95/embed/zYVpPXp?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/zhchjiang95/pen/zYVpPXp">
+      CreateCanvas 创建 Canvas 元素</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+      </iframe>`,
+    },
+  },
 ];
 
+// ①②③④⑤⑥⑦⑧⑨⑩
 export default data;
