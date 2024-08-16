@@ -224,15 +224,15 @@ const data: DataItem[] = [
     param: [
       {
         name: "data",
-        desc: "树数据，须 children 字段，可使用 childrenField 替换",
+        desc: "树数据，须 children 字段，可使用 childrenField 替换。",
       },
       {
         name: "searchField",
-        desc: "需要搜索的字段",
+        desc: "需要搜索的字段。",
       },
       {
         name: "searchValue",
-        desc: "搜索的字符串",
+        desc: "搜索的字符串。",
       },
       {
         name: "rest",
@@ -257,15 +257,15 @@ const data: DataItem[] = [
     param: [
       {
         name: "fn",
-        desc: "连续触发的函数",
+        desc: "连续触发的函数。",
       },
       {
         name: "ms",
-        desc: "执行等待的毫秒数，默认 200",
+        desc: "执行等待的毫秒数，默认 200。",
       },
       {
         name: "opts",
-        desc: "①maxWait：最大等待时间，超过立即执行一次",
+        desc: "①maxWait：最大等待时间，超过立即执行一次。",
       },
     ],
     example: {
@@ -286,15 +286,15 @@ const data: DataItem[] = [
     param: [
       {
         name: "fn",
-        desc: "在毫秒（ms）后要执行的函数",
+        desc: "在毫秒（ms）后要执行的函数。",
       },
       {
         name: "ms",
-        desc: "延迟毫秒数，默认 200",
+        desc: "延迟毫秒数，默认 200。",
       },
       {
         name: "trailing",
-        desc: "节流过程中最后一次自动执行，默认为 false",
+        desc: "节流过程中最后一次自动执行，默认为 false。",
       },
     ],
     example: {
@@ -315,19 +315,19 @@ const data: DataItem[] = [
     param: [
       {
         name: "canvas",
-        desc: "canvas元素",
+        desc: "canvas元素。",
       },
       {
         name: "paths",
-        desc: "Path2D数组",
+        desc: "Path2D数组。",
       },
       {
         name: "eventType",
-        desc: "事件类型或事件类型数组：'mousemove' | 'mouseleave' | 'mouseover' | 'click'",
+        desc: "事件类型或事件类型数组：'mousemove' | 'mouseleave' | 'mouseover' | 'click'。",
       },
       {
         name: "opts",
-        desc: "<br/>①ms：节流时延，默认80毫秒；<br/>②dpr：如果自定义了画布大小与样式大小比，则传入",
+        desc: "<br/>①ms：节流时延，默认80毫秒；<br/>②dpr：如果自定义了画布大小与样式大小比，则传入。",
       },
     ],
     example: {
@@ -348,11 +348,11 @@ const data: DataItem[] = [
     param: [
       {
         name: "canvas",
-        desc: "canvas元素，不传或null将自动创建",
+        desc: "canvas元素，不传或null将自动创建。",
       },
       {
         name: "opts",
-        desc: "<br/>①width：画布宽，默认200；<br/>②height：画布高，默认：100；③dpr: 画布宽高与样式宽高比值，默认：2;④attrs?: 其他属性。'font' | 'fillStyle' | 'strokeStyle' | 'lineWidth'等属性",
+        desc: "<br/>①width：画布宽，默认 200；<br/>②height：画布高，默认 100；<br/>③dpr: 画布宽高与样式宽高比值，默认 2;<br/>④attrs?: 其他'font' | 'fillStyle' | 'strokeStyle' | 'lineWidth'等属性。",
       },
     ],
     example: {
