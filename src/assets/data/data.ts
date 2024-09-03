@@ -363,6 +363,35 @@ const data: DataItem[] = [
       </iframe>`,
     },
   },
+  {
+    title: "TransHump",
+    hash: "transHump",
+    checked: false,
+    desc: "转换为驼峰",
+    detailed: "将字符串转为大/小驼峰。",
+    grammar: "jutils.transHump(str: string, dividers: string, big?: boolean)",
+    param: [
+      {
+        name: "str",
+        desc: "需要转换为驼峰的字符串。",
+      },
+      {
+        name: "dividers",
+        desc: "分隔符",
+      },
+      {
+        name: "big",
+        desc: "大驼峰？默认 false。",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="TransHump 转换为驼峰" src="https://codepen.io/zhchjiang95/embed/zYVmJNX?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/zhchjiang95/pen/zYVmJNX">
+      TransHump 转换为驼峰</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+      </iframe>`,
+    },
+  },
 ];
 
 // ①②③④⑤⑥⑦⑧⑨⑩
