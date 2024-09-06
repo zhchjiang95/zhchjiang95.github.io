@@ -392,6 +392,35 @@ const data: DataItem[] = [
       </iframe>`,
     },
   },
+  {
+    title: "FreelySplit",
+    hash: "freelySplit",
+    checked: false,
+    desc: "分割字符串",
+    detailed: "自由分割字符串。",
+    grammar: "jutils.freelySplit(str: string, seps: string[], opt?: { retain: boolean })",
+    param: [
+      {
+        name: "str",
+        desc: "字符串。",
+      },
+      {
+        name: "seps",
+        desc: "分割字符串的模式数组（仅支持通过string.split分割中的单个项组成的数组）。",
+      },
+      {
+        name: "opts",
+        desc: "<br/>①retain：是否保留模式数组中的项，默认true。",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="FreelySplit 分割字符串" src="https://codepen.io/zhchjiang95/embed/yLdGMgp?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/zhchjiang95/pen/yLdGMgp">
+      FreelySplit 分割字符串</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+      </iframe>`,
+    },
+  },
 ];
 
 // ①②③④⑤⑥⑦⑧⑨⑩
