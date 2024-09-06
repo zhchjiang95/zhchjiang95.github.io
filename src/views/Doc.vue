@@ -80,10 +80,10 @@ onMounted(() => {
       <div class="slip" v-if="screen"></div>
       <div class="desc-link">
         <a
-          href="https://github.com/zhchjiang95/jutils#readme"
+          href="https://www.npmjs.com/package/@zhchjiang95/jutils"
           @click="hideSide"
         >
-          <i class="ri-install-fill"></i>
+          <i class="ri-npmjs-fill"></i>
         </a>
         <a
           href="https://github.com/zhchjiang95/jutils"
@@ -266,7 +266,7 @@ onMounted(() => {
 
 .navigation-area li {
   position: relative;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 13px;
   color: #6c696a;
 }
@@ -285,7 +285,7 @@ onMounted(() => {
   z-index: 1;
   transform: translateY(-50%);
   width: 100%;
-  height: 80%;
+  height: 100%;
   z-index: -1;
   display: none;
   border-radius: 5px;
