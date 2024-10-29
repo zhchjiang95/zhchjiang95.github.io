@@ -421,6 +421,35 @@ const data: DataItem[] = [
       </iframe>`,
     },
   },
+  {
+    title: "Marquee",
+    hash: "marquee",
+    checked: false,
+    desc: "文字超出滚动显示",
+    detailed: "文字超出滚动显示，支持手动控制。",
+    grammar: "jutils.marquee(el: HTMLElement, speed: number, pause: number)",
+    param: [
+      {
+        name: "el",
+        desc: "包含文字的标签元素，文字超出宽度会滚动显示。",
+      },
+      {
+        name: "speed",
+        desc: "滚动速度：0、1、2、3、4档，默认2。",
+      },
+      {
+        name: "pause",
+        desc: "表示滚到最后停顿多长时间，值越大停顿越久，默认15。",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="Marquee 文字滚动显示" src="https://codepen.io/zhchjiang95/embed/ZEgxpER?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/zhchjiang95/pen/ZEgxpER">
+      Marquee 文字滚动显示</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+      </iframe>`,
+    },
+  },
 ];
 
 // ①②③④⑤⑥⑦⑧⑨⑩
