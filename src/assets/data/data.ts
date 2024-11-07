@@ -51,7 +51,7 @@ const data: DataItem[] = [
     },
   },
   {
-    title: "formatUrlSearch",
+    title: "FormatUrlSearch",
     hash: "formatUrlSearch",
     checked: false,
     desc: "格式化查询参数",
@@ -236,7 +236,7 @@ const data: DataItem[] = [
       },
       {
         name: "rest",
-        desc: "其余项：<br/>①childrenField：子级数组不是children，可替换 children 字段；<br/>②callback：回调函数，过滤的数据用来再做些什么？",
+        desc: "其余项：<br/>①childrenField：子级数组不是children，可替换 children 字段；<br/>②strict：严格模式，搜索比较使用绝对等于；<br/>③onlySearch：仅搜索，不过滤，匹配到的项使用callback做点什么；<br/>④callback：回调函数，过滤的数据用来再做些什么？",
       },
     ],
     example: {
@@ -244,6 +244,32 @@ const data: DataItem[] = [
       See the Pen <a href="https://codepen.io/zhchjiang95/pen/ExBbRpg">
       FilterTree 过滤树数据</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
       on <a href="https://codepen.io">CodePen</a>.
+      </iframe>`,
+    },
+  },
+  {
+    title: "MatchString",
+    hash: "matchString",
+    checked: false,
+    desc: "匹配字符串",
+    detailed: "字符串中匹配字符，匹配出的字符可用于高亮显示等。",
+    grammar:
+      "jutils.matchString(string: string, matchString: string)",
+    param: [
+      {
+        name: "string",
+        desc: "字符串。",
+      },
+      {
+        name: "matchString",
+        desc: "需要匹配的字符。",
+      },
+    ],
+    example: {
+      iframe: `<iframe height="300" style="width: 100%;" scrolling="no" title="MatchString 匹配字符串" src="https://codepen.io/zhchjiang95/embed/yLdPEEB?default-tab=html%2Cresult&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+        See the Pen <a href="https://codepen.io/zhchjiang95/pen/yLdPEEB">
+        MatchString 匹配字符串</a> by zhchjiang95 (<a href="https://codepen.io/zhchjiang95">@zhchjiang95</a>)
+        on <a href="https://codepen.io">CodePen</a>.
       </iframe>`,
     },
   },
